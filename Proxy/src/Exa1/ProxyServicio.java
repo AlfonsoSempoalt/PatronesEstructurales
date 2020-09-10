@@ -5,8 +5,9 @@ public class ProxyServicio implements IServicio {
     private IServicio servicio;
     private Usuario usuario;
 
-    public ProxyServicio(Usuario usuario) {
+    public ProxyServicio(IServicio servicio,Usuario usuario) {
         this.usuario = usuario;
+        this.servicio= servicio;
     }
 
     public void leer() {
